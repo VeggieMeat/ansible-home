@@ -5,7 +5,8 @@ name: CI
   push:
     branches:
       - main
-  schedule: "0 12 * * 1"
+  schedule:
+    - cron: "0 12 * * 1"
 
 jobs:
 
