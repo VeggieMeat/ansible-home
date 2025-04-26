@@ -1,7 +1,7 @@
 # ansible
 Contains Ansible playbooks for my personal workstation
 
-## Prequisites
+## Prerequisites
 
 Must have Git and Ansible installed.
 
