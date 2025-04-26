@@ -1,0 +1,22 @@
+---
+- name: Google Chrome || Adding signing key...
+  apt_key:
+    url: https://dl.google.com/linux/linux_signing_key.pub
+    state: present
+  become: true
+  become_method: sudo
+
+- name: Google Chrome || Adding repository...
+  apt_repository:
+    repo: deb [arch=amd64] https://dl.google.com/linux/chrome/deb/ stable main
+    state: present
+    update_cache: true
+  become: true
+  become_method: sudo
+
+- name: Google Chrome || Installing latest stable version...
+  apt:
+    name: google-chrome-stable
+    state: present
+  become: true
+  become_method: sudo

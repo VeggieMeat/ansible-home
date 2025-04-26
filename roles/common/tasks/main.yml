@@ -1,0 +1,8 @@
+---
+- name: Install common packages
+  apt:
+    name:
+      - gnupg
+    state: present
+  become: true
+  become_method: sudo
