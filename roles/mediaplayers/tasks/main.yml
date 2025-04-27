@@ -1,0 +1,22 @@
+---
+- name: Spotify || Adding signing key...
+  apt_key:
+    url: https://download.spotify.com/debian/pubkey_C85668DF69375001.gpg
+    state: present
+  become: true
+  become_method: sudo
+
+- name: Spotify || Adding repository...
+  apt_repository:
+    repo: deb [arch=amd64] https://repository.spotify.com/ stable main
+    state: present
+    update_cache: true
+  become: true
+  become_method: sudo
+
+- name: Spotify || Installing latest stable version...
+  apt:
+    name: spotify-client
+    state: present
+  become: true
+  become_method: sudo
