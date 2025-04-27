@@ -2,6 +2,8 @@
 - name: Install common packages
   apt:
     name:
+      - flatpak
+      - gnome-software-plugin-flatpak
       - gnupg
     state: present
   become: true
