@@ -3,5 +3,7 @@
 
   roles:
     - common
+    - repositories
     - browsers
+    - communication
     - mediaplayers
